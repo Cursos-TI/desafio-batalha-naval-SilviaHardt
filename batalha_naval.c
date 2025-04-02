@@ -31,7 +31,21 @@ int main() {
     for(int i = 2; i <= 4; i++) {
         campo[i][4] = 3;
     }
-    
+
+    //inserindo o terceiro barco na posição diagonal
+    for(int i = 5; i <= 7; i++) {
+        for(int j = 5; j <= 7; j++) {
+            if(i = j) {
+                campo[i][j] = 3;
+            }
+        }
+    }
+
+    //inserindo o quarto barco na posição diagonal
+    for(int i = 8; i >= 6; i--) {
+        campo[i][10 - i] = 3;
+    }
+
     //exibindo o tabuleiro no terminal
     printf("   *** Tabuleiro Batalha Naval ***\n");
     printf("\n");

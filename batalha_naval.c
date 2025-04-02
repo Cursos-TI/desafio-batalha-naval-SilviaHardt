@@ -22,6 +22,87 @@ int main() {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
     };
 
+    //criando a matriz com formato de cone
+    int cone[5][5];
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            if(i==2 && j >= 0 && j <= 4) {
+                cone[i][j] = 1;
+            } else if(i == 1 && j >= 1 && j <= 3) {
+                cone[i][j] = 1;
+            } else if(i == 0 && j == 2) {
+                cone[i][j] = 1;
+            } else {
+                cone[i][j] = 0;              
+            }
+        }
+    }
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) { 
+            printf("%d ", cone[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    //criando a matriz com formato de cruz
+    int cruz[5][5];
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            if(i == 2) {
+                cruz[i][j] = 1;
+            } else if(j == 2) {
+            cruz[i][j] = 1;
+            } else {
+            cruz[i][j] = 0; 
+            }
+        }
+    }
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) { 
+            printf("%d ", cruz[i][j]);
+        }
+        printf("\n");
+    }    
+
+    printf("\n");
+
+    //criando a matriz com formato de octaedro
+    int octaedro[5][5];
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            if(i == 0 && j == 2) {
+                octaedro[i][j] = 1;
+            } else if(i == 1 && j >= 1 && j <= 3) {
+                octaedro[i][j] = 1;
+            } else if(i == 2) {
+                octaedro[i][j] = 1;
+            } else if(i == 3 && j >= 1 && j <= 3) {
+                octaedro[i][j] = 1;
+            } else if(i == 4 && j == 2) {
+                octaedro[i][j] = 1;
+            } else {
+                octaedro[i][j] = 0;              
+            }
+        }
+    }
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) { 
+            printf("%d ", octaedro[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+
     //inserindo o primeiro barco na posição horizontal
     for(int i = 1; i <= 3; i++) {
         campo[1][i] = 3;
